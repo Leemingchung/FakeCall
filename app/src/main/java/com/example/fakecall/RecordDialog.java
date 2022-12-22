@@ -65,15 +65,15 @@ public class RecordDialog extends Dialog implements OnClickListener  {
         buttomLayout = (LinearLayout) findViewById(R.id.bottum_layout);
         buttomLayout.setVisibility(View.GONE);
         sharedPref = c.getSharedPreferences("file", 0);
-        play = (Button) findViewById(R.id.btn_play);
+        //play = (Button) findViewById(R.id.btn_play);
         record = (Button) findViewById(R.id.btn_record);
         cancel = (Button) findViewById(R.id.cancel);
         save = (Button) findViewById(R.id.save);
-        play.setOnClickListener(this);
+        //play.setOnClickListener(this);
         record.setOnClickListener(this);
         cancel.setOnClickListener(this);
         save.setOnClickListener(this);
-        play.setClickable(false);
+        //play.setClickable(false);
     }
 
     private void onRecord(boolean started) {
@@ -160,14 +160,14 @@ public class RecordDialog extends Dialog implements OnClickListener  {
             stopPlaying();
             Drawable d = c.getResources().getDrawable(R.drawable.ic_play_circle_filled_black_24dp);
             d.setBounds(0, 0, 100, 100);
-            play.setCompoundDrawables(d, null, null, null);
+            //play.setCompoundDrawables(d, null, null, null);
             return;
         }
         startPlaying();
         Drawable d = c.getResources().getDrawable(R.drawable.ic_pause_circle_filled_black_24dp);
         d.setBounds(0, 0, 100, 100);
         //Toast.makeText(c, "đang thì ghi âm ", Toast.LENGTH_SHORT).show();
-        play.setCompoundDrawables(d, null, null, null);
+        //play.setCompoundDrawables(d, null, null, null);
     }
 
     private void startPlaying() {
@@ -218,14 +218,14 @@ public class RecordDialog extends Dialog implements OnClickListener  {
                     onPlay(playStarted);
                 }
                 onRecord(recordStarted);
-                play.setClickable(true);
+               // play.setClickable(true);
                 return;
-            case R.id.btn_play :
-                if (recordStarted) {
-                    onRecord(recordStarted);
-                }
-                onPlay(playStarted);
-                return;
+//            case R.id.btn_play :
+//                if (recordStarted) {
+//                    onRecord(recordStarted);
+//                }
+//                onPlay(playStarted);
+//                return;
             case R.id.cancel :
                 onPlay(true);
                 onRecord(true);
