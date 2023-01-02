@@ -72,7 +72,7 @@ public class ScheduleActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(getApplication(), Main3.class));
         finish();
     }
 }

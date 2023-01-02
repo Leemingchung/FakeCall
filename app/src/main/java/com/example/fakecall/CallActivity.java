@@ -68,7 +68,19 @@ public class CallActivity extends AppCompatActivity {
         window.addFlags(FLAG_SHOW_WHEN_LOCKED);
         window.addFlags(FLAG_TURN_SCREEN_ON);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_call2);
+        int chung =(R.layout.activity_call2) ;
+
+//        switch (idLayout)
+//        {
+//            case 1 :
+                setContentView(chung);
+//            case 2 :
+//                setContentView(R.layout.activity_call);
+//            default:
+//                setContentView(R.layout.activity_call2);
+//
+//        }
+
        // loadInterstitialAd();
         context = this;
         calling = (RelativeLayout) findViewById(R.id.calling);

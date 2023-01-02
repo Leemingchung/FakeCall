@@ -15,7 +15,7 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), Main3.class));
                 finish();
             }
         }, 3000);
